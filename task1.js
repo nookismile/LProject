@@ -1,5 +1,5 @@
 /**
- *
+ * Function for sort string
  * @param arr
  * @param param
  * @returns {*[]}
