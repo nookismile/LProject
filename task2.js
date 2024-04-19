@@ -1,8 +1,8 @@
 /**
- *
- * @param ob
- * @param keys
- * @returns {{[p: string]: unknown}}
+ * Function for convert object
+ * @param obj
+ * @param {...string} items
+ * @returns object
  */
 
 function pick(obj, ...items) {
