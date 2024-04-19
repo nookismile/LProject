@@ -1,12 +1,17 @@
 /**
- *
+ * Function for convert object
  * @param obj
- * @param items
- * @returns {{[p: string]: unknown}}
+ * @param {...string} items
+ * @returns object
  */
 
 function omit(obj, ...items) {
-    return Object.fromEntries(
-        Object.entries(obj).filter(([item]) => !items.includes(item))
-    );
+   let result = {};
+    
+  for ([key, value] of Object.entries(obj)) {
+    if(!items.includes(key)) {
+      result[key] = value;
+    }
+  }  
+  return result;
 }
