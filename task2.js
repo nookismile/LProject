@@ -6,7 +6,13 @@
  */
 
 function pick(obj, ...items) {
-    return Object.fromEntries(
-        Object.entries(obj).filter(([item]) => items.includes(item))
-    );
+  let result = {};
+    
+  for (item of items) {
+    if(obj.hasOwnProperty(item)) {
+    result[item] = obj[item];
+    }
+  }
+    
+  return result;
 }
